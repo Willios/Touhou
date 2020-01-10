@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(71, 71, 71);
+    background-color: rgb(0, 0, 0);
     font-family: 'Kalam', cursive;
     color: white;
 }
@@ -7,7 +7,7 @@ body {
     border: rgb(0, 0, 0) solid 2px !important;
 }
 .opacity {
-    background-color: rgba(3, 23, 33, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .font-taille-grand {
     font-size: 50px;

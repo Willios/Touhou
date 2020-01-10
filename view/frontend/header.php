@@ -12,7 +12,7 @@
     </head>
 
     <body class="container-fluid">
-        <div class="d-flex justify-content-center rounded border opacity flex-row flex-wrap col-md-10 offset-md-1 my-2">
+        <div class="d-flex rounded border opacity flex-row flex-wrap col-md-10 offset-md-1 my-2">
         <div class="col-md-3 text-center"><img src="../../public/css/toho.png" class="img-fluid my-2" alt="Toho" width="60%"></div>
             <nav class="col-md-8 text-center navbar my-4">
                 <a href="home.php">Home</a>
