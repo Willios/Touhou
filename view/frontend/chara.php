@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 ?>
 
 <!-- <div class="d-flex opacity flex-row flex-wrap col-md-10 offset-md-1 my-2"> -->
-<div class="row col-md-12 justify-content-center">
+<div class="offset-md-2 col-md-8 d-flex justify-content-center" id="borderBottom">
     <div class="col-md-5 text-center my-4">
         <p>
             <?php 

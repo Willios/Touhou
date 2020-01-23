@@ -10,15 +10,15 @@ $dKind = displayKind();
 
 <form class="d-flex flex-column" action="rooter.php?action=add" method="post">
     <div class=" d-flex order-1 justify-content-center mt-4">
-        <input type="text" name="title" placeholder="Game title here">
+        <input class="exampleInputEmail1" type="text" name="title" placeholder="Game title here">
     </div>
 
     <div class=" d-flex order-6 justify-content-center">
-        <textarea style="width:500px;height:500px" id="textEditor" name="descri"></textarea>
+        <textarea class="exampleInputEmail1" style="width:500px;height:350px" id="textEditor" name="descri" placeholder="Description here"></textarea>
     </div>
 
     <div class=" d-flex order-2 justify-content-center">
-        <input class="my-4" type="url" name="url" placeholder="Image url here">
+        <input class="my-4 exampleInputEmail1" type="url" name="url" placeholder="Image url here">
     </div>
     <div class="d-flex flex-row order-3 justify-content-center my-3">
         <select name="years" class="form-control col-md-1 px-2">
@@ -47,7 +47,7 @@ $dKind = displayKind();
                 <option value="FanMade">FanMade</option>
         </select>
     </div>
-    <div class="d-flex order-7 justify-content-center my-3">
+    <div class="d-flex order-7 justify-content-center pb-4 my-3">
         <input type='submit' value='Envoyer'/>
     </div>
 </form>
