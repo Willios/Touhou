@@ -19,7 +19,7 @@ ini_set('display_errors', 1);
             <div class="form-group my-1 col-md-6 offset-md-3">
                 <label for="exampleInputEmail1">NEWSLETTER</label>
                     <div class="col-md-12 d-flex flex-row flex-nowrap">
-                        <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        <input  name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                         <button type="submit" class="btn btn-primary mx-2">Submit</button>
                     </div>
                 <small id="emailHelp" class="form-text">Get the latest news about Touhou development !</small>

@@ -40,8 +40,8 @@ ini_set('display_errors', 1);
 
                 ?>
 
-        <div class="col-md-12 rounded border bg-secondary my-2 myImg">
-            <h1 class="col-md-12 m-2 text-center text-dark"><?php echo htmlspecialchars($data1['Charaname']); ?></h1>
+        <div class="mouseHover offset-md-1 col-md-10 rounded border bg-secondary my-2 myImg">
+            <h1 class=" col-md-12 m-2 text-center text-dark"><?php echo htmlspecialchars($data1['Charaname']); ?></h1>
                 <div class="d-flex col-md-12 flex-row flex-nowrap">
                     <div class="col-md-12"><p><?php echo htmlspecialchars($data1['descrip']); ?></p>
                 </div>

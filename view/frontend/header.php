@@ -22,11 +22,11 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="test">
-            <a class="navtextcolor mx-4" href="home.php">Home</a>
-            <a class="navtextcolor mx-4" href="games.php">Games</a>
-            <a class="navtextcolor mx-4" href="chara.php">Characters</a>
-            <a class="navtextcolor mx-4" href="myproject.php">Project</a>
-            <a class="navtextcolor mx-4" href="addnewentry.php">Add new game</a>
+            <a class="navtextcolor mx-4 textmouseHover" href="home.php">Home</a>
+            <a class="navtextcolor mx-4 textmouseHover" href="games.php">Games</a>
+            <a class="navtextcolor mx-4 textmouseHover" href="chara.php">Characters</a>
+            <a class="navtextcolor mx-4 textmouseHover" href="myproject.php">Project</a>
+            <a class="navtextcolor mx-4 textmouseHover" href="addnewentry.php">Add new game</a>
             </div>
         </nav>
 
