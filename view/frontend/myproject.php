@@ -1,6 +1,6 @@
 <?php require('header.php'); ?>
 
-<div class="col-md-11 text-center my-2" id="nopadding">
+<div class="col-md-12 text-center centerViewport">
     <header id="time" class="clock" style="text-align: center; color: white; margin-bottom: 30px; font-size: 5em; display: none;"></header>
     <canvas id="myCanvas" width="750" height="550">
         <img id="home" src="../../public/js/IMG/home.png" alt="home" style="display: none;">
@@ -26,10 +26,6 @@
         <img id="cirWin" src="../../public/js/IMG/CirnoWins_game.png" style="display: none;">
     </canvas>
     <script src="../../public/js/BombermanV5.js"></script>
-    <footer style="text-align: center;color: white;font-size: 3em; display: none; flex-wrap: wrap;justify-content: space-between; width: 80%;margin-left: 10%;">
-        <div id="p1score"></div>
-        <div id="p2score"></div>
-    </footer>
 </div>
 <div class="col-md-12 mb-1"></div>
 

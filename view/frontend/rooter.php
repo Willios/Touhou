@@ -60,6 +60,10 @@ if (isset($_GET['action'])) {
         $news = htmlspecialchars($_POST["email"]);
         newsletter($news);
     }
+    if ($_GET['action'] == 'add') {
+        add($_POST);
+        echo "New entry successfully add";
+    }
 
     
 } elseif (isset($_GET['filterLetter'])) {

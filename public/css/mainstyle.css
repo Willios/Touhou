@@ -1,13 +1,22 @@
+html {
+    height: 100%;
+}
 body {
     background-color: rgb(0, 0, 0);
     font-family: 'Kalam', cursive;
     color: white;
+    height: 100%;
 }
-.border {
-    border: rgb(0, 0, 0) solid 2px !important;
+.marginauto {
+    position: absolute;
+    bottom: 45%;
+}
+#closeFooter {
+    position: absolute;
+    bottom: 4%;
 }
 .opacity {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0);
 }
 .font-taille-grand {
     font-size: 50px;
@@ -18,10 +27,29 @@ body {
 p {
     font-size: 20px;
 }
-#nopadding {
-    padding : 0;
+nav {
+    background-color: lightgray;
 }
 a {
     color: #8ec744 ;
     font-size: 25px;
+    
+}
+#test a.navtextcolor {
+
+    color: white;
+    text-decoration: none;
+}
+.video {
+    opacity: 0.3;
+    position: fixed;
+}
+.footer {
+    position: fixed;
+    
+}
+
+.centerViewport {
+    position: absolute;
+    bottom: 25%;
 }

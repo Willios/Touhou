@@ -355,10 +355,10 @@ function loading(){
         clock = 300;
         setInterval(start);
     }
-    function drawScore(){
-        document.getElementById("p1score").innerHTML = player1.score ;
-        document.getElementById("p2score").innerHTML = player2.score ;
-    }
+    // function drawScore(){
+    //     document.getElementById("p1score").innerHTML = player1.score ;
+    //     document.getElementById("p2score").innerHTML = player2.score ;
+    // }
 //Pour vérifier si le joueur se tient sur une flamme, auquel cas, le joueur meurt
     function checkIfDead(){
         if((board[player1.pY][player1.pX] >= 100 && board[player1.pY][player1.pX] <= 113) 
@@ -413,7 +413,7 @@ function loading(){
         checkIfDead();
         drawClock();
         decreaseClock();
-        drawScore();
+        // drawScore();
         //Parcours le tableau bombeListe et applique pour chaque élément la méthode bombTimer
         for(let i=0; i<bombeListe.length; i++){
             bombeListe[i].bombTimer();

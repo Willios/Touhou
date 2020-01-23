@@ -16,28 +16,34 @@ function getAll($dev,$kind,$years){
 	
     $db = dbConnect();
 
-    // $filter = $db->prepare("SELECT * FROM TouhouProject WHERE years ? ? OR kind ? ? OR dev ? ?");
-    // $filter->execute([$whereY,$years,$whereK,$kind,$whereD,$dev]);
-
     $filter = $db->prepare("SELECT * FROM TouhouProject WHERE years LIKE ? AND kind LIKE ? AND dev LIKE ? ");
     $filter->execute([$years,$kind,$dev]);
-
-    //$filter->debugDumpParams();
 
 	return $filter;
 }
 
-function firstLetter($letter){
+function firstLetter($letter,$perpage,$offset){
 	
     $db = dbConnect();
-    $req = $letter . '%';
 
-    $firstLetter = $db->prepare("SELECT * FROM Characters WHERE `Charaname` LIKE ? ");
-    $firstLetter->execute([$req]);
+    $firstLetter = $db->prepare("SELECT * FROM Characters WHERE `Charaname` LIKE ? LIMIT $perpage OFFSET $offset");
+    $firstLetter->execute([$letter]);
 
 	return $firstLetter;
 }
+function nbrPages($letter,$paraPerpages) {
 
+    $db = dbConnect();
+    
+    $int = $db->prepare("SELECT COUNT(id) FROM Characters WHERE `Charaname` LIKE ?");
+    $int->execute([$letter]);
+    $countElements=(int)$int->fetch(PDO::FETCH_NUM)[0];
+
+    $countPages = ceil($countElements/$paraPerpages);
+
+    return $countPages;
+    
+}
 function allYears() {
 
     $db = dbConnect();
@@ -65,4 +71,22 @@ function getMail($postMail){
     $addMail->execute(array($postMail));
 
     return $addMail;
+}
+
+function totalPagination(){
+	
+    $db = dbConnect();
+
+    $total = (int)$db->query("SELECT COUNT(id) FROM Characters")->fetch(PDO::FETCH_NUM)[0];
+    
+    return $total;
+    
+}
+
+function addEntryDb($array) {
+
+    $db = dbConnect();
+
+    $addDataDb = $db->prepare("INSERT INTO TouhouProject (title,descri,img,years,kind,dev) VALUES (?,?,?,?,?,?)");
+    $addDataDb->execute(array_values($array));
 }

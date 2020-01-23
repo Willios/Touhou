@@ -32,8 +32,18 @@ function newsletter($news) {
 
 function filterLetter($letter) {
 
-    $displayChara = firstLetter($letter);
+    $currentpage = (int)($_GET['page'] ?? 1);
+    $perpage = 5;
+    $offset = $perpage * ($currentpage -1 );
+    $pages = nbrPages($letter."%",$perpage);
 
+    $displayChara = firstLetter($letter."%",$perpage,$offset);
     require('chara.php');
 
 }
+function add($array){
+
+    $add = addEntryDb ($array);
+    require('addnewentry.php');
+}
+
