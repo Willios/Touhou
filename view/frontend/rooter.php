@@ -64,6 +64,7 @@ if (isset($_GET['action'])) {
         add($_POST);
         echo "New entry successfully add";
     }
+    
 
     
 } elseif (isset($_GET['filterLetter'])) {

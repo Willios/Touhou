@@ -48,7 +48,7 @@ $dKind = displayKind();
         </select>
     </div>
     <div class="d-flex order-7 justify-content-center pb-4 my-3">
-        <input type='submit' value='Envoyer'/>
+        <input class="button" type='submit' value='Envoyer'/>
     </div>
 </form>
 

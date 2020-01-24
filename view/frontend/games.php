@@ -44,17 +44,26 @@ $dKind = displayKind();
 <?php 
 
 if(isset($display)) {
-
+    error_log("enter display");
     while ($data = $display->fetch()){ 
         
         ?>
             <div class=" mouseHover col-md-12 test rounded border bg-secondary my-2">
-            <h1 class=" col-md-12 test m-4 text-center text-dark"><?php echo htmlspecialchars($data['title']); ?></h1>
-            <div class="d-flex col-md-12 flex-row flex-nowrap">
-            <div class="test col-md-10"><p><?php echo htmlspecialchars($data['descri']); ?></p></div>
-            <div class="test col-md-2"><img class="container-fluid" src="<?php echo htmlspecialchars($data['img']); ?>"></div>
+                <h1 class=" col-md-12 test m-4 text-center text-dark"><?php echo htmlspecialchars($data['title']); ?></h1>
+                <div class="d-flex col-md-12 flex-row flex-nowrap">
+                    <div class="test col-md-10"><p><?php echo htmlspecialchars($data['descri']); ?></p></div>
+                    <div class="test col-md-2"><img class="container-fluid" src="<?php echo htmlspecialchars($data['img']); ?>"></div>
+                </div>
+                <div class="col-md-12 ml-3">
+                    <h4>Characters in this game :<br></h4>
+                    <?php 
+                    $cdisplaycpGames = charPerGames($data['id']);
+                    for ($i=0;$i < count($cdisplaycpGames); $i++) {
+                        echo htmlspecialchars(" - " .$cdisplaycpGames[$i]['Charaname'])."<br>";
+                    }?>
+                </div>
             </div>
-            </div>
+        
 
     <?php 
         } $display->closeCursor();

@@ -73,3 +73,31 @@ a {
 #borderBottom {
     border-bottom: 2px solid rgb(255, 255, 255);
 }
+
+.button {
+    background-color: rgb(76, 99, 175);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+@media screen and (max-width: 640px) {
+    #screenWidth {
+      display:none;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #mediaqueriesText {
+        font-size: 16px;
+    }
+}

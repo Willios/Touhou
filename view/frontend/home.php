@@ -3,14 +3,15 @@ ini_set('display_errors', 1);
 ?>
 
 <div class="video-reponsive">
-<video autoplay loop muted="" width="100%" class="video" ><source src="../../public/css/trailer.mp4" type="video/mp4"></video>
+<video autoplay loop muted="" id="screenWidth" class="video" ><source src="../../public/css/trailer.mp4" type="video/mp4"></video>
 </div>
 
-<div class="marginauto col-md-12 text-center">
-    <img src="../../public/css/toho.png" width="10%">
+<div class="col-md-12 d-flex flex-column">
+<div class="d-flex my-5 justify-content-center"><img src="../../public/css/toho.png" width="10%"></div>
         <div class="col-12 my-2">
-            <div class="col-md-12 mb-1">
-                <p>The Touhou Project is a series of 2D vertically-scrolling danmaku shooting games made by Team Shanghai Alice, with six fighting game spinoffs co-produced with Twilight Frontier.</p>
+            <div class="offset-md-1 col-md-10 d-flex justify-content-center mb-1">
+                <p id="mediaqueriesText">The Touhou Project (東方Project), also 東方プロジェクト (Touhou Purojekuto) or Project Shrine Maiden, is a Japanese doujin game series that specialises in shoot 'em ups by sole Team Shanghai Alice member ZUN. Generally, it's a series of 2D (with 3D background) vertically-scrolling danmaku shooting games, that also creates related print works and music CDs. There are also six fighting game spinoffs co-produced with Twilight Frontier, called "danmaku action games." The works of Touhou Project are sometimes called the Touhou Series (東方シリーズ Tōhō shirīzu) for convenience.
+                <br><br>The Guinness World Records named the Touhou Project as the "worlds most prolific fan-made shooter series."</p>
             </div>
         </div>
     </div>
@@ -26,5 +27,17 @@ ini_set('display_errors', 1);
             </div>
         </form>
     </div>
+
+<script>
+
+window.addEventListener('resize', pluginWP)
+
+function pluginWP() {
+    screenWidth.setAttribute("width",screen.width);
+}
+pluginWP();
+
+
+</script>
 
 <?php require('footer.php'); ?>

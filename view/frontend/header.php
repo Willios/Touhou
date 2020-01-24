@@ -17,11 +17,11 @@
 
   
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center d-flex">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#test" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="test">
+            <div class="collapse navbar-collapse justify-content-center" id="test">
             <a class="navtextcolor mx-4 textmouseHover" href="home.php">Home</a>
             <a class="navtextcolor mx-4 textmouseHover" href="games.php">Games</a>
             <a class="navtextcolor mx-4 textmouseHover" href="chara.php">Characters</a>

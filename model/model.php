@@ -90,3 +90,17 @@ function addEntryDb($array) {
     $addDataDb = $db->prepare("INSERT INTO TouhouProject (title,descri,img,years,kind,dev) VALUES (?,?,?,?,?,?)");
     $addDataDb->execute(array_values($array));
 }
+
+function charPerGames($id) {
+
+    $db = dbConnect();
+
+    $req = $db->prepare("SELECT t.id AS id_game,c.Charaname
+    FROM TouhouProject AS t, Characters AS c, joint AS j
+    WHERE t.id = ? AND t.id = j.id_game AND j.id_chara = c.id");
+    $req->execute(array($id));
+    $cpGames = $req->fetchAll(PDO::FETCH_ASSOC);
+    return $cpGames;
+
+}
+// ;
