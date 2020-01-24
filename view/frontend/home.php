@@ -1,11 +1,13 @@
 <?php require('header.php'); 
-ini_set('display_errors', 1);
+ini_set('display_errors', 1); // Pour afficher les erreurs php directement la page en question
 ?>
 
+<!-- Balise pour la vidéo en background sur la page home.php -->
 <div class="video-reponsive">
 <video autoplay loop muted="" id="screenWidth" class="video" ><source src="../../public/css/trailer.mp4" type="video/mp4"></video>
 </div>
 
+<!-- Division qui gère l'affichage du logo et de la description de Touhou Project -->
 <div class="col-md-12 d-flex flex-column">
 <div class="d-flex my-5 justify-content-center"><img src="../../public/css/toho.png" width="10%"></div>
         <div class="col-12 my-2">
@@ -15,6 +17,8 @@ ini_set('display_errors', 1);
             </div>
         </div>
     </div>
+
+<!-- Division pour la newsletter -->
     <div class="col-md-12 text-center my-1" id="closeFooter">
         <form action="rooter.php?action=addMail" method="post">
             <div class="form-group my-1 col-md-6 offset-md-3">
@@ -28,6 +32,8 @@ ini_set('display_errors', 1);
         </form>
     </div>
 
+<!-- Script JS qui permet a la vidéo en fond de toujours prendre 100% du viewport dynamiquement ( Sans refresh de pâge) -->
+<!-- Combiner a un media queries qui supprime l'affichage de la video quand la largeur du viewport est inférieur a 640px voir mainstyle.css -->
 <script>
 
 window.addEventListener('resize', pluginWP)

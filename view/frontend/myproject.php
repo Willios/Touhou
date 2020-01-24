@@ -1,5 +1,6 @@
 <?php require('header.php'); ?>
 
+<!-- Incrustration du projet Touhou Bomberman cf BombermanV5.js -->
 <div class="d-flex flex-column">
     <div class="col-md-12 d-flex mt-5 justify-content-center">
         <header id="time" class="clock" style="text-align: center; color: white; margin-bottom: 30px; font-size: 5em; display: none;"></header>
