@@ -1,8 +1,9 @@
 <?php 
-ini_set('display_errors', 1);
+//ini_set('display_errors', 1);
+//Requête header et controller
 require('header.php');
 require_once('../../controller/controller1.php');
-
+//Déclaration variable
 $dYears = displayYears();
 $dKind = displayKind();
 
@@ -23,21 +24,21 @@ $dKind = displayKind();
     <div class="d-flex flex-row order-3 justify-content-center my-3">
         <select name="years" class="form-control col-md-1 px-2">
             <option value="defaultY">Years</option>
-
+            <!-- Boucle afficher année -->
             <?php while ($dataYears = $dYears->fetch()) { ?>
 
             <option value="<?php echo $dataYears["years"]; ?>"><?php echo $dataYears["years"]; ?></option>
-
+            <!-- Fermeture boucle -->
             <?php } $dYears->closeCursor(); ?>
         </select>
 
         <select name="kind" class="form-control col-md-1 px-2">
             <option value="defaultKoG">Kind of Game</option>
-
+            <!-- Boucle afficher type de jeu -->
             <?php while ($dataKind = $dKind->fetch()) { ?>
 
             <option value="<?php echo $dataKind["kind"]; ?>"><?php echo $dataKind["kind"]; ?></option>
-
+            <!-- Fermeture boucle -->
             <?php }$dKind->closeCursor(); ?>
         </select>
 
@@ -52,5 +53,5 @@ $dKind = displayKind();
     </div>
 </form>
 
-
+<!-- Requête footer -->
 <?php require('footer.php'); ?>

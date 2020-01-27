@@ -1,5 +1,5 @@
 <?php
-
+//Conntection base de donnée
 function dbConnect(){
     try
     {
@@ -12,6 +12,7 @@ function dbConnect(){
         die('Erreur : '.$e->getMessage());
     }
 }
+//Récupération des jeux base de donnée
 function getAll($dev,$kind,$years){
 	
     $db = dbConnect();
@@ -21,7 +22,7 @@ function getAll($dev,$kind,$years){
 
 	return $filter;
 }
-
+//Récuparation de première lettre personnage
 function firstLetter($letter,$perpage,$offset){
 	
     $db = dbConnect();
@@ -31,6 +32,7 @@ function firstLetter($letter,$perpage,$offset){
 
 	return $firstLetter;
 }
+//Pagination
 function nbrPages($letter,$paraPerpages) {
 
     $db = dbConnect();
@@ -44,6 +46,7 @@ function nbrPages($letter,$paraPerpages) {
     return $countPages;
     
 }
+//Récup des années de la base de donnée
 function allYears() {
 
     $db = dbConnect();
@@ -53,7 +56,7 @@ function allYears() {
     return $filterYears;
 
 }
-
+//Récup types de jeu de la base de donnée
 function allKind() {
 
     $db = dbConnect();
@@ -63,6 +66,7 @@ function allKind() {
     return $filterKind;
 
 }
+//Insérer l'email récupérer dans la base de donnée
 function getMail($postMail){
 
     $db = dbConnect();
@@ -72,7 +76,7 @@ function getMail($postMail){
 
     return $addMail;
 }
-
+//Total pour la pagination de chaque partie
 function totalPagination(){
 	
     $db = dbConnect();
@@ -82,7 +86,7 @@ function totalPagination(){
     return $total;
     
 }
-
+//Ajout d'un nouveau jeu dans la base de donnée
 function addEntryDb($array) {
 
     $db = dbConnect();
@@ -90,7 +94,7 @@ function addEntryDb($array) {
     $addDataDb = $db->prepare("INSERT INTO TouhouProject (title,descri,img,years,kind,dev) VALUES (?,?,?,?,?,?)");
     $addDataDb->execute(array_values($array));
 }
-
+//Lie les base de donnée de jeu et personnage pour afficher les personnages selon les jeux.
 function charPerGames($id) {
 
     $db = dbConnect();
@@ -103,4 +107,3 @@ function charPerGames($id) {
     return $cpGames;
 
 }
-// ;

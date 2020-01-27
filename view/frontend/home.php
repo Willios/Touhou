@@ -32,7 +32,7 @@ ini_set('display_errors', 1); // Pour afficher les erreurs php directement la pa
         </form>
     </div>
 
-<!-- Script JS qui permet a la vidéo en fond de toujours prendre 100% du viewport dynamiquement ( Sans refresh de pâge) -->
+<!-- Script JS qui permet a la vidéo en fond de toujours prendre 100% du viewport dynamiquement ( Sans refresh de page) -->
 <!-- Combiner a un media queries qui supprime l'affichage de la video quand la largeur du viewport est inférieur a 640px voir mainstyle.css -->
 <script>
 
